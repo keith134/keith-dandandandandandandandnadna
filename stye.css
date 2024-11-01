@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #1b1b2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.box {
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    background: linear-gradient(145deg, #23253a, #1b1b2f);
+    border: 2px solid #0ef5f5;
+    color: #0ef5f5;
+    border-radius: 10px;
+    margin: 10px 0;
+    resize: both;
+    overflow: auto;
+    cursor: text;
+    box-shadow: 0 0 15px rgba(14, 245, 245, 0.6);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(14, 245, 245, 0.9);
+}
+
+.connector {
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(180deg, transparent, #0ef5f5, transparent);
+    animation: pulse 1.5s infinite;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.groups {
+    justify-content: space-evenly;
+}
+
+.advisor {
+    font-weight: 700;
+    color: #0ef5f5;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        background: linear-gradient(180deg, transparent, #0ef5f5, transparent);
+    }
+    50% {
+        background: linear-gradient(180deg, transparent, #ff00cc, transparent);
+    }
+}
